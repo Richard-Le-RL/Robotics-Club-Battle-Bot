@@ -1,0 +1,22 @@
+#include <Arduino.h>
+// #include "BluetoothSerial.h"
+
+// ESP32 to Controller 
+const int DIR = 26; // direction control
+const int SPIN = 27; // spin control 
+
+void setup() {
+    Serial.begin(115200);
+    pinMode(DIR, OUTPUT);
+    pinMode(SPIN, OUTPUT);
+}
+
+ void loop() {
+    // example code to set direction and spin pins
+    digitalWrite(DIR, HIGH); // set direction
+    digitalWrite(SPIN, HIGH); // set spin
+    delay(1000); // wait for a second
+    digitalWrite(DIR, LOW); // change direction
+    digitalWrite(SPIN, LOW); // stop spin
+    delay(1000); // wait for a second
+ }
